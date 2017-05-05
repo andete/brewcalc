@@ -31,6 +31,7 @@ impl Sg {
     }
 }
 
+// assume bigger then 1.2 is Plato
 impl From<f64> for Sg {
     fn from(x:f64) -> Sg {
         if x > 1.2 {
