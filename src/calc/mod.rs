@@ -38,6 +38,8 @@ impl Sg {
 
 // assume bigger then 1.2 is Plato
 impl From<f64> for Sg {
+
+    /// if x is bigger then 1.2 Plato is assumed, else Specific Gravity
     fn from(x: f64) -> Sg {
         if x > 1.2 {
             Plato(x).into()
