@@ -1,8 +1,8 @@
 // (c) 2017 Joost Yervante Damad <joost@damad.be>
 
-pub struct Plato(f64);
+pub struct Plato(pub f64);
 
-pub struct Sg(f64);
+pub struct Sg(pub f64);
 
 // formula from https://www.brewersfriend.com/plato-to-sg-conversion-chart/
 impl From<Sg> for Plato {
