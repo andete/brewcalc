@@ -1,6 +1,9 @@
 // (c) 2017 Joost Yervante Damad <joost@damad.be>
 
+/// a liquid gravity in Plato
 pub struct Plato(pub f64);
+
+/// a liquid gravity in Specific Gravity
 pub struct Sg(pub f64);
 
 // formula from https://www.brewersfriend.com/plato-to-sg-conversion-chart/
@@ -24,6 +27,8 @@ impl From<Plato> for Sg {
 // from https://www.brewersfriend.com/2011/06/16/alcohol-by-volume-calculator-updated/
 
 impl Sg {
+
+    /// calculate the ABV of this using the OG
     pub fn abv(self, og: &Sg) -> f64 {
         let og = og.0;
         let fg = self.0;
